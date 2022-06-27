@@ -66,4 +66,4 @@ Thumbnail without image means post is video and post URL will be redirected to v
 ```
 
 ## Previous version 1
-Old version marked as depricated bu still internally available as `alexey/facebook-page-posts-checker-v1`
+Old version marked as depricated but still internally available to run by name `alexey/facebook-page-posts-checker-v1`
