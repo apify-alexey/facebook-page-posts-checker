@@ -1,0 +1,40 @@
+{
+  "title": "Facebook page posts checker",
+  "description": "Fast and easy scraping for Facebook page posts, NO RESIDENTIAL PROXIES required.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "pageNames": {
+      "title": "Page names",
+      "type": "array",
+      "description": "Names of the public facebook pages to get posts from",
+      "editor": "stringList",
+      "uniqueItems": false,
+      "prefill": [ "apifytech" ]
+    },
+		"scrollsAmount": {
+			"title": "Number of feed scrolls",
+			"type": "integer",
+			"description": "How many scrolls per page feed should be done, expecting 5 posts per feed",
+      "prefill": 3,
+			"default": 3
+		},
+    "proxy": {
+      "title": "Proxy configuration",
+      "type": "object",
+      "description": "You need to use Apify proxy or custom proxies.",
+      "default": {
+          "useApifyProxy": true
+      },
+      "prefill": {
+          "useApifyProxy": true
+      },
+      "editor": "proxy",
+      "sectionCaption": "Proxy settings",
+      "sectionDescription": ""
+    }
+  },
+  "required": [
+    "pageNames", "proxy"
+  ]
+}

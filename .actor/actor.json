@@ -1,0 +1,43 @@
+{
+  "actorSpecification": 1,
+  "name": "facebook-page-posts-checker",
+  "title": "Facebook page posts checker",
+  "description": "Facebook page posts",
+  "version": "0.0.1",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "title": "Facebook page posts",
+      "description": "Too see all scraped properties, export the whole dataset or select All fields instead of Overview",
+      "views": {
+        "overview": {
+          "title": "Overview",
+          "description": "",
+          "transformation": {
+            "fields": [
+              "url",
+              "time",
+              "likes",
+              "comments",
+              "shares",
+              "text",
+              "link"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "columns": [
+              { "label": "Post URL", "format": "text", "field": "url" },
+              { "label": "Time", "format": "text", "field": "time" },
+              { "label": "Likes", "format": "text", "field": "likes" },
+              { "label": "Comments", "format": "text", "field": "comments" },
+              { "label": "Shares", "format": "text", "field": "shares" },
+              { "label": "Link", "format": "text", "field": "link" },
+              { "label": "Text", "format": "text", "field": "text" }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

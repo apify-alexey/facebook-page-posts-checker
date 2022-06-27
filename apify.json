@@ -1,0 +1,7 @@
+{
+	"name": "facebook-page-posts-checker",
+	"version": "2.0",
+	"buildTag": "latest",
+	"env": null,
+	"template": "project_cheerio_crawler"
+}
