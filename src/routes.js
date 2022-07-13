@@ -43,9 +43,9 @@ exports.handleFeed = async ({ request, crawler }, { embed, html, scrollsAmount }
     const $ = cheerio.load(html);
     const posts = Array.from($('.userContentWrapper')).map((x) => {
         const stats = Array.from($('table td', x)).map((td) => {
-            const counterText = $(td).text();
+            const counterText = $(td)?.text()?.toLowerCase();
             // for high volumes of likes-comments-shares we getting rounded values i.e. "3.2K"
-            const counterValue = counterText.includes('.') ? parseFloat(counterText) * 1000 : parseInt(counterText, 10)
+            const counterValue = counterText.includes('.') || counterText.includes('k') ? parseFloat(counterText) * 1000 : parseInt(counterText, 10)
             return counterValue;
         });
         const abbrTime = $('.timestamp', x);
