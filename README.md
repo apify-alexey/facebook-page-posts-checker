@@ -4,6 +4,9 @@ Fast and easy scraping for Facebook page posts, NO RESIDENTIAL PROXIES required.
 
 Posts sorted by time, from newest to oldest. Expected 5 posts per scroll, maximum amount of posts might randomly vary based on IP, but under any IP or proxy at least 200 posts should be available, confirmed stable output is 500 posts per page.
 
+## Cost of usage
+- [Compute units](https://apify.com/pricing/actors) - 0.06CU per 100 posts or less
+
 ## Input
 
 Provide list of pages and amount of scrolls to do on each page.
@@ -17,6 +20,7 @@ Provide list of pages and amount of scrolls to do on each page.
 
 ## Output
 
+Counters over 1.000 rounded to hundreds, i.e. 1.812 likes will be rounded to 1.800 likes.
 CSV friendly, optimized for facebook photos sharing:
 
 ```json
