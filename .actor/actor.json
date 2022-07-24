@@ -8,10 +8,10 @@
     "dataset": {
       "actorSpecification": 1,
       "title": "Facebook page posts",
-      "description": "Too see all scraped properties, export the whole dataset or select All fields instead of Overview",
+      "description": "",
       "views": {
-        "overview": {
-          "title": "Overview",
+        "posts": {
+          "title": "Posts",
           "description": "",
           "transformation": {
             "fields": [
@@ -21,19 +21,23 @@
               "comments",
               "shares",
               "text",
-              "link"
+              "link",
+              "thumb"
             ]
           },
           "display": {
             "component": "table",
             "columns": [
-              { "label": "Post URL", "format": "text", "field": "url" },
+              {
+                "label": "Post",
+                "format": "textWithImage",
+                "field": "$text",
+                "imageUrlField": "$thumb"
+              },
               { "label": "Time", "format": "text", "field": "time" },
-              { "label": "Likes", "format": "text", "field": "likes" },
-              { "label": "Comments", "format": "text", "field": "comments" },
-              { "label": "Shares", "format": "text", "field": "shares" },
-              { "label": "Link", "format": "text", "field": "link" },
-              { "label": "Text", "format": "text", "field": "text" }
+              { "label": "Likes", "format": "number", "field": "likes" },
+              { "label": "Comments", "format": "number", "field": "comments" },
+              { "label": "Shares", "format": "number", "field": "shares" }
             ]
           }
         }
